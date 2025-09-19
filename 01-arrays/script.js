@@ -36,11 +36,14 @@ const teachers = ["Nathan", "Ed", "Fabio", "Phil", "Carlo", "Lewis", "Luca"]; //
 
 // 5. Aggiungi un insegnante di nome 'Vanessa' alla fine dell'array teachers
 
-teachers.push("Vanessa");
-console.log(teachers);
+// teachers.push("Vanessa");
+// console.log(teachers);
 
 
 // 6. Aggiungi un insegnante di nome 'Sarah' all'inizio dell'array teachers
+
+teachers.unshift("Sarah")
+console.log(teachers);
 
 // 7. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
