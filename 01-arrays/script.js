@@ -1,5 +1,5 @@
-const teachers = ["Nathan", "Ed", "Fabio", "Phil", "Carlo", "Lewis", "Luca"]; // NON MODIFICARE QUESTA VARIABILE
-
+ const teachers = ["Nathan", "Ed", "Fabio", "Phil", "Carlo", "Lewis", "Luca"]; // NON MODIFICARE QUESTA VARIABILE
+// const teachers = [];
 // 0. Per ogni insegnante stampa in console la frase:
 // [Nome insengante] è l'insegnante in posizione [i]
 
@@ -61,10 +61,17 @@ const teachers = ["Nathan", "Ed", "Fabio", "Phil", "Carlo", "Lewis", "Luca"]; //
 // 9. Unisci tutti gli insegnanti nell'array teachers in una stringa
 // separata da virgole e salvala nella variabile teachersString
 
-const teachersString = teachers.toString();
-console.log(teachersString);
+// const teachersString = teachers.toString();
+// console.log(teachersString);
 
 
 // 10. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
-const isTeachersEmpty = null;
+
+let isTeachersEmpty = false;
+
+if (teachers.length === 0) {
+    isTeachersEmpty = true;
+}
+
+console.log(isTeachersEmpty);
