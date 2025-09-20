@@ -20,17 +20,27 @@ const teachers = ["Nathan", "Ed", "Fabio", "Phil", "Carlo", "Lewis", "Luca"]; //
 
 // Metodo con for senza svuotare l'array teachers
 
-const reversedTeachers = [];
-for (let i = teachers.length - 1; i >= 0 ; i--) {
-   const curTeacher = teachers[i];
-   reversedTeachers.push(curTeacher);
-}
+// const reversedTeachers = [];
+// for (let i = teachers.length - 1; i >= 0 ; i--) {
+//    const curTeacher = teachers[i];
+//    reversedTeachers.push(curTeacher);
+// }
 
-console.log(reversedTeachers);
-console.log(teachers);
+// console.log(reversedTeachers);
+// console.log(teachers);
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
 // con un nome di lunghezza maggiore o uguale a 5 caratteri
-const longNames = null;
+const longNames = [];
+for (let i = 0; i < teachers.length; i++) {
+  const curLenght = teachers[i].length;
+  const curTeacher = teachers[i];
+  if (curLenght >= 5) {
+    longNames.push(curTeacher);
+  }
+}
+
+console.log(longNames);
+
 
 // 3. Rimuovi 'Ed' dall'array teachers (fatelo con un metodo e poi provate a farlo anche con il ciclo for)
