@@ -31,16 +31,38 @@ const teachers = ["Nathan", "Ed", "Fabio", "Phil", "Carlo", "Lewis", "Luca"]; //
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
 // con un nome di lunghezza maggiore o uguale a 5 caratteri
-const longNames = [];
-for (let i = 0; i < teachers.length; i++) {
-  const curLenght = teachers[i].length;
-  const curTeacher = teachers[i];
-  if (curLenght >= 5) {
-    longNames.push(curTeacher);
-  }
-}
 
-console.log(longNames);
+// const longNames = [];
+// for (let i = 0; i < teachers.length; i++) {
+//   const curLenght = teachers[i].length;
+//   const curTeacher = teachers[i];
+//   if (curLenght >= 5) {
+//     longNames.push(curTeacher);
+//   }
+// }
+
+// console.log(longNames);
 
 
 // 3. Rimuovi 'Ed' dall'array teachers (fatelo con un metodo e poi provate a farlo anche con il ciclo for)
+
+// Metodo con .indexOf + .splice
+
+// const index = teachers.indexOf("Ed");
+// if (index !== -1) {
+//     teachers.splice(index, 1);
+// } 
+
+// console.log(teachers);
+
+// Metodo con for
+
+for (let i = teachers.length - 1; i >= 0; i--) {
+    const curTeacher = teachers[i];
+    if (curTeacher === "Ed") {
+        teachers.splice(i, 1);
+    }
+    
+}
+console.log(teachers);
+
