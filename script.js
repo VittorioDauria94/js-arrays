@@ -67,18 +67,27 @@
 
 // 4. Calcola la somma e la media dei primi 10 numeri.
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let sum = 0;
-let average = 0;
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let sum = 0;
+// let average = 0;
 
-for (let i = 0; i < numbers.length; i++) {
-    const curNumber = numbers[i];
-    sum += curNumber;
-}
-average = sum / (numbers.length);
+// for (let i = 0; i < numbers.length; i++) {
+//     const curNumber = numbers[i];
+//     sum += curNumber;
+// }
+// average = sum / (numbers.length);
 
-console.log(sum);
-console.log(average);
+// console.log(sum);
+// console.log(average);
 
 // 5. Generatore di “nomi cognomi” casuali: il Grande Gatsby ha una lista di nomi e una lista di cognomi, 
 // e da queste vuole generare una falsa lista di invitati con nome e cognome.
+
+const names = ["Alma", "Hazel", "Drew", "Nina", "Laylah", "Kensley", "Mya", "Phoebe", "Louisa", "Skyler"];
+const surname = ["Dodson", "Meyer", "Fleming", "McDaniel", "Weber", "Huynh", "Woods", "Dalton", "Strickland", "McConnell"];
+
+for (let i = 0; i < names.length; i++) {
+    const curName = names[Math.floor(Math.random() * names.length)];
+    const curSurname = surname[Math.floor(Math.random() * surname.length)]
+    console.log(`${curName} ${curSurname}`);
+}
