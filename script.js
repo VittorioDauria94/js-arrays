@@ -1,25 +1,47 @@
 // 1. Crea un array vuoto. Genera 6 numeri casuali compresi tra 1 e 100, inserisci nel array solo i numeri dispari.
 
-const oddArray = [];
+// const oddArray = [];
+// function getRandomIntInclusive() {
+//   const minCeiled = Math.ceil(1);
+//   const maxFloored = Math.floor(100);
+//   return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);  
+// }
+// for (let i = 0; i < 6; i++) {
+//     const curNumber = getRandomIntInclusive();
+//     // console.log(curNumber); debug
+    
+//     if (curNumber % 2 !== 0) {
+//         oddArray.push(curNumber);
+//     }    
+// }
+
+// console.log(oddArray);
+
+
+// 2. Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+
+const intArray = [];
+let sum = 0;
+
 function getRandomIntInclusive() {
   const minCeiled = Math.ceil(1);
   const maxFloored = Math.floor(100);
   return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);  
 }
+
 for (let i = 0; i < 6; i++) {
-    const curNumber = getRandomIntInclusive();
-    // console.log(curNumber); debug
-    
-    if (curNumber % 2 !== 0) {
-        oddArray.push(curNumber);
-    }    
+    intArray.push(getRandomIntInclusive());   
 }
 
-console.log(oddArray);
+for (let i = 0; i < intArray.length; i++) {
+    const curNumber = intArray[i];
+    if (i % 2 !== 0) {
+        sum += curNumber;
+    }
+}
 
-
-// 2. Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
-
+console.log(intArray);
+console.log(sum);
 
 // 3. Chiedi un numero di 4 cifre all’utente e calcola la somma di tutte le cifre che compongono il numero.
 
