@@ -45,28 +45,40 @@
 
 // 3. Chiedi un numero di 4 cifre all’utente e calcola la somma di tutte le cifre che compongono il numero.
 
-const numberStr = prompt("Inserisci un numero a 4 cifre.");
-let message = "";
-let sum = 0;
+// const numberStr = prompt("Inserisci un numero a 4 cifre.");
+// let message = "";
+// let sum = 0;
 
-if (numberStr === null || numberStr.length !== 4 || isNaN(numberStr)) {
-    message = `Errore: inserire un numero corretto. ricarica la pagina.`;
-} else {
-    const numberArray = Array.from(numberStr, Number);
-    // console.log(numberArray); debug
+// if (numberStr === null || numberStr.length !== 4 || isNaN(numberStr)) {
+//     message = `Errore: inserire un numero corretto. ricarica la pagina.`;
+// } else {
+//     const numberArray = Array.from(numberStr, Number);
+//     // console.log(numberArray); debug
 
-    for (let i = 0; i < numberArray.length; i++) {
-        const curNumber = numberArray[i];
-        sum += curNumber;
-        message = `Hai inserito il numero ${numberStr}, la somma di tutte le cifre è ${sum}`
-    }
-}
+//     for (let i = 0; i < numberArray.length; i++) {
+//         const curNumber = numberArray[i];
+//         sum += curNumber;
+//         message = `Hai inserito il numero ${numberStr}, la somma di tutte le cifre è ${sum}`;
+//     }
+// }
 
-console.log(message);
+// console.log(message);
 
 
 // 4. Calcola la somma e la media dei primi 10 numeri.
 
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sum = 0;
+let average = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    const curNumber = numbers[i];
+    sum += curNumber;
+}
+average = sum / (numbers.length);
+
+console.log(sum);
+console.log(average);
 
 // 5. Generatore di “nomi cognomi” casuali: il Grande Gatsby ha una lista di nomi e una lista di cognomi, 
 // e da queste vuole generare una falsa lista di invitati con nome e cognome.
