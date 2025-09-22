@@ -20,30 +20,49 @@
 
 // 2. Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
 
-const intArray = [];
+// const intArray = [];
+// let sum = 0;
+
+// function getRandomIntInclusive() {
+//   const minCeiled = Math.ceil(1);
+//   const maxFloored = Math.floor(100);
+//   return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);  
+// }
+
+// for (let i = 0; i < 6; i++) {
+//     intArray.push(getRandomIntInclusive());   
+// }
+
+// for (let i = 0; i < intArray.length; i++) {
+//     const curNumber = intArray[i];
+//     if (i % 2 !== 0) {
+//         sum += curNumber;
+//     }
+// }
+
+// console.log(intArray);
+// console.log(sum);
+
+// 3. Chiedi un numero di 4 cifre all’utente e calcola la somma di tutte le cifre che compongono il numero.
+
+const numberStr = prompt("Inserisci un numero a 4 cifre.");
+let message = "";
 let sum = 0;
 
-function getRandomIntInclusive() {
-  const minCeiled = Math.ceil(1);
-  const maxFloored = Math.floor(100);
-  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);  
-}
+if (numberStr === null || numberStr.length !== 4 || isNaN(numberStr)) {
+    message = `Errore: inserire un numero corretto. ricarica la pagina.`;
+} else {
+    const numberArray = Array.from(numberStr, Number);
+    // console.log(numberArray); debug
 
-for (let i = 0; i < 6; i++) {
-    intArray.push(getRandomIntInclusive());   
-}
-
-for (let i = 0; i < intArray.length; i++) {
-    const curNumber = intArray[i];
-    if (i % 2 !== 0) {
+    for (let i = 0; i < numberArray.length; i++) {
+        const curNumber = numberArray[i];
         sum += curNumber;
+        message = `Hai inserito il numero ${numberStr}, la somma di tutte le cifre è ${sum}`
     }
 }
 
-console.log(intArray);
-console.log(sum);
-
-// 3. Chiedi un numero di 4 cifre all’utente e calcola la somma di tutte le cifre che compongono il numero.
+console.log(message);
 
 
 // 4. Calcola la somma e la media dei primi 10 numeri.
